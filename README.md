@@ -1,5 +1,7 @@
 # Reconnaissance de chiffres interactive
 
+![Demo de l'application](gif_swag.gif)
+
 Petite IA de détection de chiffres (Réseau de Neurones Convolutifs) avec interface pour reconnaître vos chiffres. 
 
 ```bash
@@ -17,6 +19,8 @@ python main.py
 
 
 # Interactive Digit Recognition
+
+![App demo](gif_swag.gif)
 
 A small digit detection AI (Convolutional Neural Network) featuring an interface to recognize your handwritten digits.
 
