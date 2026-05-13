@@ -11,7 +11,7 @@ class MiniPaint:
     def __init__(self, root, model):
         self.root = root
         self.model = model
-        root.title("Reconnaissance De Chiffres")
+        root.title("DIGIT RECOGNITION - Draw with your mouse (Press Echapp to quit)")
         root.resizable(False, False)
 
         # canvas de dessin
@@ -27,13 +27,13 @@ class MiniPaint:
         self.btn_frame = tk.Frame(self.bottom_frame)
         self.btn_frame.pack(side=tk.LEFT)
         
-        tk.Button(self.btn_frame, text="Prédire (Space)", command=self.predict_drawing, width=15).pack(pady=2)
-        tk.Button(self.btn_frame, text="Effacer (c)", command=self.clear_canvas, width=15).pack(pady=2)
+        tk.Button(self.btn_frame, text="Predict (Space)", command=self.predict_drawing, width=15).pack(pady=2)
+        tk.Button(self.btn_frame, text="Clear (c)", command=self.clear_canvas, width=15).pack(pady=2)
 
         # Prédiction
         self.result_frame = tk.Frame(self.bottom_frame)
         self.result_frame.pack(side=tk.RIGHT, padx=10)
-        self.lbl_result = tk.Label(self.result_frame, text="Prédictions :\n", font=("Arial", 16, "bold"), fg="#333333", justify=tk.CENTER)
+        self.lbl_result = tk.Label(self.result_frame, text="Prediction :\n", font=("Arial", 16, "bold"), fg="#333333", justify=tk.CENTER)
         self.lbl_result.pack()
 
         # Evenements
@@ -71,7 +71,7 @@ class MiniPaint:
     def clear_canvas(self):
         self.canvas.delete("all")
         self.dessin = [[0 for _ in range(GRID)] for _ in range(GRID)]
-        self.lbl_result.config(text="Prédictions :\n", fg="#333333")
+        self.lbl_result.config(text="Prediction :\n", fg="#333333")
         self.vient_de_predire = False
 
     def predict_drawing(self):
@@ -107,4 +107,4 @@ if __name__ == "__main__":
         app = MiniPaint(root, trained_model)
         root.mainloop()
     else:
-        print(f"Erreur : Le modèle '{model_path}' est introuvable")
+        print(f"Erreur : model '{model_path}' was not found. Maybe another name ?")
