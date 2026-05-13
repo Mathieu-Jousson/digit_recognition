@@ -1,6 +1,6 @@
 # Reconnaissance de chiffres interactive
 
-Petite IA de détection de chiffres (Réseau de Neurones Convolutifs) avec interface pour reconnaître vos chiffres. 
+Petite IA de détection de chiffres (Réseau de Neurones Convolutifs) avec interface pour reconnaître vos chiffres. Marche... à presque tous les coups !
 
 ```bash
 # Cloner le dépôt
@@ -18,7 +18,7 @@ python main.py
 
 # Interactive Digit Recognition
 
-A small digit detection AI (Convolutional Neural Network) featuring an interface to recognize your handwritten digits.
+A small digit detection AI (Convolutional Neural Network) featuring an interface to recognize your handwritten digits. It works... almost all the time !
 
 ```bash
 # Clone the repository
